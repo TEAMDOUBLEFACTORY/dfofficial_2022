@@ -1,0 +1,104 @@
+.svgFuwa {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: -13%;
+  left: -70%;
+  margin: auto;
+  max-width:  1500px;
+}
+
+.svgFuwa svg {
+  position: absolute;
+  top: 0;
+  margin: auto;
+}
+
+.svgFuwa2 {
+  position: absolute;
+  z-index: 1;
+  width: 78%;
+  height: 100%;
+  top: 6%;
+  right: -52%;
+  margin: auto;
+  max-width:  1500px;
+}
+
+.svgFuwa2 svg {
+  position: absolute;
+  top: 0;
+  margin: auto;
+}
+
+
+.bg-img {
+  height: 100%;
+}
+
+.mask-object1::before {
+  display: none;
+}
+
+#company #sec03 ul li:hover .img-box img {
+  opacity: 0;
+}
+
+#company #sec03 .img-box {
+  position: relative;
+  padding-top: 65%;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+}
+
+#company #sec03 .img-box img {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#company #sec03 .img-box:hover img {
+  opacity: 0;
+}
+
+.img-box-video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 2;
+}
+
+@media screen and (max-width: 1280px) {
+  .svgFuwa {
+    height: 760px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .svgFuwa {
+    top: -8%;
+  }
+  .svgFuwa svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 539px) {
+  .svgFuwa {
+    top: -11%;
+  }
+  .svgFuwa svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+/*# sourceMappingURL=add-anim.css.map */

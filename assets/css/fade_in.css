@@ -1,0 +1,16 @@
+
+@media (min-width: 768px) {
+    .toggle:hover .nav3 {
+        display: block !important;
+    }
+}
+
+@media (max-width: 767px) {
+    #container {
+        height: 2000px;
+    }
+    
+    .fade_in {
+        opacity: 0;
+    }
+}
