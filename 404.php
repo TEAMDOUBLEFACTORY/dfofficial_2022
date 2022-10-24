@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
         <div class="title-box">
             <div class="container"><h2 class="title"><span class="en orange">404 Not Found</span></h2></div>
         </div>
