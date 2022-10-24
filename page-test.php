@@ -1,9 +1,5 @@
 <?php get_header(); ?>
-<div id="splash">
-    <div id="splash_logo">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/splash_logo.png" alt="" class="fadeUp">
-    </div>
-</div>
+<div id="top" class="top-new">
 <div class="mask-object1">
     <div class="box"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/mask-object.jpg" alt=""></div>
 </div>
@@ -165,7 +161,12 @@
                                 'taxonomy' => 'works_type',
                                 'field' => 'slug',
                                 'terms' => array('movie')
-                              )
+                              ),
+                              array(
+                                'taxonomy' => 'recommend',
+                                'field' => 'slug',
+                                'terms' => array('true')
+                              ),
                             ),
                             //'suppress_filters' => true
                         );
@@ -186,7 +187,7 @@
                         <?php endif; ?>
                       </ul>
                     <div class="btn-box flex">
-                       <!--<a href="<?php echo home_url( '/' ); ?>works_type/movie/" class="btn">もっと見る</a>-->
+                        <a href="<?php echo home_url( '/' ); ?>works_type/movie/" class="btn">もっと見る</a>
                         <a href="https://vimeo.com/showcase/9419444" class="btn"  target="_brank" rel="noopener">動画の実績</a>
                     </div>
                 </div>
@@ -285,6 +286,7 @@
                     </div>
                 </div>
             </section>
+        </div>
 
             <script>
             window.addEventListener('DOMContentLoaded',function(){

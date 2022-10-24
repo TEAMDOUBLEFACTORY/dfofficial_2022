@@ -10,7 +10,12 @@
 <script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?keKTd8lPfBI%3D" charset="utf-8"></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8876780969497676"
      crossorigin="anonymous"></script>
+
+<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/modal-video.css">
+<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/modal-video.js"></script>
 	<!-- Twitter universal website tag code -->
+
 <script>
 !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
 },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
@@ -34,13 +39,37 @@ twq('track','PageView');
   gtag('event', 'conversion', {'send_to': 'AW-982885287/H6r_CN2dnbwDEKfH1tQD'});
 </script>
 
+<script>
+  gtag('config', 'AW-982885287/maWbCJ-s_sgDEKfH1tQD', {
+    'phone_conversion_number': '06-6743-4174'
+  });
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1606214943113089');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1606214943113089&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+	
 <?php wp_head(); ?>
 </head>
 
     <body>
     	<div id="cursor" class="cursor"></div>
     	<?php if ( is_home() || is_front_page() ) : ?>
-			<div id="top" class="wrapper">
+			<div id="top" class="wrapper top-new">
 		<?php elseif (is_post_type_archive($post_types = 'works') || is_tax("works_type")) : ?>
 			<div id="works" class="wrapper sub">
 		<?php elseif (is_singular('works')) : ?>
@@ -59,14 +88,19 @@ twq('track','PageView');
         
     <header class="midnight">	
 			<div class="container flex">
-				<div class="left">
+				<div class="left flex">
 					<h1>
 						<a href="<?php echo home_url( '/' ); ?>">
-							<svg>
+							<svg role="img" aria-label="<?php wp_title('|', true, 'right'); bloginfo('name');?>">
 						    	<use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg#logo"></use>
 						  	</svg>
 						</a>
 					</h1>
+					
+						<a href="<?php echo home_url( '/' ); ?>sdgs">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/images/sdgs-img12.png" alt="sdgs logo">
+						</a>
+					
 				</div>
 				<div class="right flex">
 					<div class="modal_box">
@@ -80,7 +114,8 @@ twq('track','PageView');
 									<li class="en nav-item fadeRightTrigger fadeRight delay-time03"><a href="<?php echo home_url( '/' ); ?>company">Company</a></li>
 									<li class="en nav-item fadeRightTrigger fadeRight delay-time04"><a href="<?php echo home_url( '/' ); ?>works">Works</a></li>
 									<li class="en nav-item fadeRightTrigger fadeRight delay-time05"><a href="<?php echo home_url( '/' ); ?>blogs">Blogs</a></li>
-									<li class="en nav-item fadeRightTrigger fadeRight delay-time06"><a href="<?php echo home_url( '/' ); ?>contact">Contact</a></li>
+									<li class="en nav-item fadeRightTrigger fadeRight delay-time06"><a href="<?php echo home_url( '/' ); ?>sdgs">SDGs</a></li>
+									<li class="en nav-item fadeRightTrigger fadeRight delay-time07"><a href="<?php echo home_url( '/' ); ?>contact">Contact</a></li>
 								</ul>
 							</nav>
 						</div>

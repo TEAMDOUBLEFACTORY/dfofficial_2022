@@ -1,10 +1,8 @@
 		<?php if ( is_home() || is_front_page() ) : ?>
 		<div class="sns-box"><a href="https://www.instagram.com/doublefactory/" target="_brank">Instagram</a><a href="https://www.facebook.com/doublefactory/" target="_brank">Facebook</a></div>
 		<?php endif; ?>
-         
-		
-		<footer data-midnight="white">
-			<div class="new-cta pc">
+
+		<div class="new-cta pc">
 				<a href="<?php echo home_url( '/' ); ?>contact" class="flex">
 					<div class="left">
 						<p class="text1">WEB制作で<br>お困りならまずは</p>
@@ -17,6 +15,10 @@
 					</div>
 				</a>
 			</div>
+         
+		
+		<footer data-midnight="white">
+			
 			<div class="container">
 				<div class="top">
 					<div class="flex">
@@ -49,7 +51,11 @@
 						<div class="security-action"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/security_action_futatsuboshi-large_bw.png" alt="セキュリティアクション自己宣言企業です"></div>
 					</div>
 				</div>
-				<div class="bottom">
+				<div class="bottom flex">
+					<ul class="flex">
+						<li><a href="<?php echo home_url( '/' ); ?>privacy-policy">プライバシーポリシー</a></li>
+						<li><a href="<?php echo home_url( '/' ); ?>notes">WEBサイト制作に関する注意事項</a></li>
+					</ul>
 					<small>COPYRIGHT - 2021 doublefacotry.com</small>
 				</div>
 				<div class="sp footer-menu">

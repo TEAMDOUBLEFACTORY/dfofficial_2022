@@ -67,8 +67,8 @@ function my_password_form() {
   return
     '<section id="sec01">
     <div class="container">
-    <p class="a1">この実績はパスワードで保護されています。<br>閲覧するにはお送りしたパスワードをご入力ください。</p>
-    <form class="post_password" action="' . home_url() . '/wp-login.php?action=postpass" method="post">
+    <p class="a1">この実績はパスワードで保護されています。<br>閲覧するにはお送りした<br class="sp">パスワードをご入力ください。</p>
+    <form class="post_password" action="' . home_url() . '/login_98002?action=postpass" method="post">
     <input name="post_password" type="password" size="24" class="pass" />
     <input type="submit" class="submit" name="Submit" value="' . esc_attr__("確定") . '" />
     </form>
@@ -76,6 +76,7 @@ function my_password_form() {
     </section>';
 }
 add_filter('the_password_form', 'my_password_form');
+
 
 add_filter( 'big_image_size_threshold', '__return_false' );
 
@@ -124,3 +125,4 @@ if(function_exists('wpp_get_views')){
     },10,2);
 
 }
+

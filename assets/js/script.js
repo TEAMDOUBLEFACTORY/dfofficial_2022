@@ -76,12 +76,12 @@ $(document).ready(function(){
         if ( scrollHeight - scrollPosition  <= footHeight ) {
             $(".sns-box").css({
                 "position":"absolute",
-                "bottom": footHeight + 0
+                "bottom": footHeight + 100
             });
         } else {
             $(".sns-box").css({
                 "position":"fixed",
-                "bottom": "10px"
+                "bottom": "250px"
             });
         }
     });
@@ -96,12 +96,12 @@ $(document).ready(function(){
         if ( scrollHeight - scrollPosition  <= footHeight ) {
             $(".new-cta").css({
                 "position":"absolute",
-                "bottom": footHeight + 0
+                "bottom": footHeight - 100
             });
         } else {
-            $(".snew-cta").css({
+            $(".new-cta").css({
                 "position":"fixed",
-                "bottom": "10px"
+                "bottom": "30px"
             });
         }
     });
@@ -242,6 +242,39 @@ $(function() {
                 settings: {
                   slidesToShow: 1,
                   centerPadding: "10%",
+                },
+              },
+            ],
+     });
+
+    $('.slider2').slick({
+          infinite: true,
+          dots: false,
+          arrows: false,
+          slidesToShow: 3,
+          autoplay:true,
+          swipeToSlide: true,
+          responsive: [
+                {
+                breakpoint: 1180,
+                settings: {
+                },
+              },
+              {
+                breakpoint: 991,
+                settings: {
+                  slidesToShow: 1,
+                },
+              },{
+                breakpoint: 821,
+                settings: {
+                  slidesToShow: 1,
+                },
+              },
+              {
+                breakpoint: 641,
+                settings: {
+                  slidesToShow: 1,
                 },
               },
             ],
@@ -444,3 +477,5 @@ this.pause();
 this.currentTime = 0;
 }, false);
 })();
+
+$(".js-modal-btn").modalVideo({channel:'vimeo'});

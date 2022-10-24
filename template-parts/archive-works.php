@@ -40,6 +40,21 @@
           'paged' => $paged,
           'posts_per_page' => 100,
           'post_status' => 'publish',
+          'tax_query' => array(
+            array(
+                'taxonomy' => 'secret',
+                'field' => 'slug',
+                'terms' => 'true',
+                'operator' => 'NOT IN',
+                ),
+            array(
+                'taxonomy' => 'movie_item',
+                'field' => 'slug',
+                'terms' => 'none',
+                'operator' => 'NOT IN',
+                )
+            ),
+
       ); ?>
       <?php query_posts( $args ); ?>
       <?php if (have_posts()) : ?>
@@ -66,8 +81,8 @@
     </ul>
     <?php wp_pagenavi(); ?>
     <div class="text">
-      <p>ここに掲載しているサイトはほんの一部です。<br>掲載出来ない実績はお問い合わせページより<br class="sp">ご請求いただき閲覧いただくことが可能です。</p>
-      <div class="btn-box"><a href="<?php echo home_url( '/' ); ?>contact" target="_brank" class="btn">他の実績を請求する</a></div>
+      <p>ここに掲載しているサイトはほんの一部です。<br>掲載出来ない実績はパスワードをご請求いただき<br class="sp">入力することで閲覧いただけます。</p>
+      <div class="btn-box"><a href="<?php echo home_url( '/' ); ?>contact" class="btn">パスワードを請求する</a><a href="<?php echo home_url( '/' ); ?>secret-works" target="_brank" class="btn">非公開実績を見る</a></div>
     </div>
   </div>
 </section>

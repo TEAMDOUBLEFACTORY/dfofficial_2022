@@ -10,7 +10,10 @@
                     <h3 class="a1"><?php the_title(); ?></h3>
                     <?php the_content(); ?>
                     <?php $field = get_field('service_icon'); if($field){ echo '<div class="service-icon"><img src="'.$field.'"></div>';} ?>
-                    <div class="img-box"><?php the_post_thumbnail(''); ?></div>
+                    <?php if ( get_field( 'thumbnail_show' ) ): ?><?php else: ?><div class="img-box"><?php the_post_thumbnail(''); ?></div><?php endif; ?>
+                    <?php if( get_field('movie') ): ?>
+                        <?php $movie = get_field('movie'); if($movie){ echo '<div class="movie-box">'.$movie.'</div>';} ?>
+                    <?php endif; ?>
                 </div>
             </div>
             <?php if( get_field('slider_img1') ): ?>
